@@ -1,0 +1,15 @@
+# Ignore configuration files
+/config.php
+
+# Ignore environment settings
+.env
+
+# Ignore log files and databases
+*.log
+*.sql
+
+# Ignore node_modules if using Node.js
+node_modules/
+
+# Ignore vendor if using Composer (PHP)
+vendor/

@@ -1,0 +1,182 @@
+/* CSS for Search Results Page */
+
+/* Apply styles to the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a fallback font */
+    background-color: #141414; /* Set background color */
+}
+
+/* Apply styles to the heading */
+h2 {
+    color: grey; /* Set heading color */
+    text-align: center; /* Center-align the heading */
+}
+
+/* Apply styles to the container of each search result item */
+.item {
+    margin: 20px auto; /* Set margin around each item */
+    padding: 20px; /* Add padding to each item */
+    background-color: grey; /* Set background color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    max-width: 600px; /* Limit maximum width of each item */
+}
+
+/* Apply styles to the image within each item */
+.item img {
+    display: block; /* Make the image a block element */
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Apply styles to the title within each item */
+.item h3 {
+    margin-top: 10px; /* Add margin at the top of the title */
+    font-size: 20px; /* Set font size for the title */
+    color: #333; /* Set text color for the title */
+}
+
+/* Apply styles to the price within each item */
+.item p {
+    margin-top: 5px; /* Add margin at the top of the price */
+    font-size: 16px; /* Set font size for the price */
+    color: #777; /* Set text color for the price */
+}
+
+/*==================CSS FOR THE HORIZONTAL BAR===================*/
+.horizontal-bar{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /*==========================CSS FOR THE HEADING OF THE PAGE ====================*/
+  
+  .heading{
+    position: absolute;
+    top: 0.5vw;
+    left: 50%;
+    transform: translateX(-50%); /* Adjusted to center the logo horizontally */
+    width: 30vw;
+    height: 20vh;
+    font-family: "cinzel decorative" ,sans-serif ;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 1vw #FFFF00; /* This adds a blue outline around the text */
+  }
+
+  /*Font for sign in heading*/
+.cinzel-decorative-regular {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cinzel-decorative-bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+  }
+ 
+  
+  /*==========================CSS FOR THE SCROLL BAR=====================*/
+  /* WebKit scrollbar */
+  /* Track */
+  ::-webkit-scrollbar {
+    width: 15px; /* Set width of the scrollbar */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FFFF00; /* Color of the scrollbar handle */
+    border-radius: 5px; /* Border radius of the scrollbar handle */
+    border: 2px solid black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: grey; /* Color of the scrollbar track */
+  }
+  
+  /* Handle when scrolling */
+  ::-webkit-scrollbar-thumb:active {
+    background: #000; /* Color of the scrollbar handle when scrolling */
+  }
+  
+  /*=====================CSS FOR THE HAMBURGER MENU AND NAV BAR======================*/
+
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
+  margin-top: 0;
+  float: left;
+  position: relative;
+  left: 1vw;
+  top: 1vw;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu:hover{
+  transform: translateY(-5px);
+}
+
+.line {
+  width: 90px;
+  height: 20px;
+  background-color: #000;
+  border: 2px solid #FFFF00;
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out; /* Adjusted timing function to ease-in-out */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+}
+
+.vertical-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: black;
+  border: 1px solid #FFFF00;
+  text-shadow: 0 0 1vw #FFFF00; /* This adds a blue outline around the text */
+  padding: 20px;
+  z-index: 9999; /* Set a high z-index value to make sure it appears in front */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.vertical-nav a {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  font-size: 24px;
+  font-family: 'Cinzel decorative' , sans-serif;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+.vertical-nav a:hover {
+  opacity: 0.7;
+}
+
+
+.gray-line {
+  border: none;
+  border-top: 1px solid gray; /* Adjust the thickness and color as needed */
+  width: 80%; /* Adjust the width as needed */
+  margin: 20px auto; /* Adjust the margin to center the line horizontally */
+}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "Music Online Website",
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"mglass"
+		],
+		"liveServer.settings.port": 5501
+	}
+}

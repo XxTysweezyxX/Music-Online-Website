@@ -1,0 +1,420 @@
+body{
+    margin: 0;
+    border: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh;
+}
+
+
+
+/*THIS IS THE CSS FOR THE FROSTED MENU BOX*/
+
+.box {
+    width: 1000px; /* Width of the box */
+    height: 675px; /* Height of the box */
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background color */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    box-shadow: inset;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
+    backdrop-filter: blur(15px); /* Frosty effect */
+    -webkit-backdrop-filter: blur(15px); /* Frosty effect (for Safari) */
+}
+
+
+.left-img-box{
+    width: 600px;
+    height: 675px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgba(255,255,0,0.4);
+    align-items: center; /* Center alignment */
+    justify-content: center; /* Center alignment */
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 52%;
+    opacity: 0.8;
+    transform: translate(20%, -50%);
+    z-index: 1;
+    
+
+}
+
+/*===================register heading================*/
+.register-heading{
+  font-size: 65px;
+  color: black;
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  padding-right: 35px;
+  z-index: 2;
+  text-shadow: 0 0 5px #FFFF00; /* This adds a blue outline around the text */
+
+}
+/*Font for sign in heading*/
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+/*====================Username field==============*/
+/* Style for the username input */
+.username-input {
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+  margin: 20px auto; /* Adjust margin as needed */
+  top: 35%;
+  right: 250px;
+  position: absolute;
+  transform: translate(50% , -50%);
+  z-index: 2;
+}
+
+.username-input::before ,.password-input::before, .email-input::before{
+  content: '';
+  display: block;
+  width: 140%;
+  height: 1px;
+  background-color: #FFFF00;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.username-input::after, .password-input::after,.email-input::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: -10px; /* Adjust to hover 10px above the solid line */
+  left: 0;
+  transition: opacity 0.3s ease; /* Add transition for smooth animation */
+  opacity: 0; /* Initially hide the dashed line */
+}
+
+.username-label {
+  position: absolute;
+  bottom: 10px; /* Adjust vertical position of the label */
+  left: 0;
+  color: black; /* Adjust color as needed */
+  text-shadow: 0 0 2px #FFFF00; /* This adds a blue outline around the text */
+  font-size: 30px; /* Adjust font size as needed */
+  pointer-events: none; /* Prevent label from being clickable */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.username-input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 10px 0; /* Adjust padding as needed */
+  position: relative; /* Set input position to relative */
+}
+
+.username-input input:focus + .username-label,
+.username-input input:not(:placeholder-shown) + .username-label {
+  opacity: 0; /* Hide label when input is focused or has value */
+}
+
+.username-input input:not(:placeholder-shown) {
+  position: absolute;
+  top: -5px; /* Adjust vertical position of the input */
+  left: 0;
+  z-index: 1;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: #000; /* Adjust text color as needed */
+}
+
+
+/* Style for the label */
+.username-label {
+  margin-right: 10px;
+  font-weight: bold;
+  position: static;
+  font-family: 'Cinzel Decorative', sans-serif; /* Set font to Cinzel Decorative */
+  pointer-events: none; /* Prevent label from being clickable */
+  
+}
+
+/*=======================Password css============*/
+.password-input{
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+  margin: 20px auto; /* Adjust margin as needed */
+  top: 55%;
+  right: 250px;
+  position: absolute;
+  transform: translate(50% , -50%);
+  z-index: 2;
+
+}
+
+.password-input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 10px 0; /* Adjust padding as needed */
+  position: relative; /* Set input position to relative */
+  z-index: 2;
+}
+
+.password-label {
+  position: absolute;
+  bottom: 10px; /* Adjust vertical position of the label */
+  left: 0;
+  font-weight: bold;
+  font-family: 'Cinzel Decorative', sans-serif; /* Set font to Cinzel Decorative */
+  color: black; /* Adjust color as needed */
+  text-shadow: 0 0 2px #FFFF00; /* This adds a blue outline around the text */
+  font-size: 30px; /* Adjust font size as needed */
+  pointer-events: none; /* Prevent label from being clickable */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.password-input input:focus + .password-label,
+.password-input input:not(:placeholder-shown) + .password-label {
+  opacity: 0; /* Hide label when input is focused or has value */
+}
+
+.password-input input:not(:placeholder-shown) {
+  position: absolute;
+  top: -50px; /* Adjust vertical position of the input */
+  left: 0;
+  z-index: 1;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: #000; /* Adjust text color as needed */
+}
+
+/*==================Email Feild==================*/
+
+/* Email Field */
+.email-input {
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+  margin: 20px auto; /* Adjust margin as needed */
+  top: 71%;
+  right: 250px;
+  position: absolute;
+  transform: translate(50%, -50%);
+  z-index: 2;
+}
+
+.email-input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 10px 0; /* Adjust padding as needed */
+  position: relative; /* Set input position to relative */
+}
+
+.email-label {
+  position: absolute;
+  bottom: 10px; /* Adjust vertical position of the label */
+  left: 0;
+  font-weight: bold;
+  font-family: 'Cinzel Decorative', sans-serif; /* Set font to Cinzel Decorative */
+  color: black; /* Adjust color as needed */
+  text-shadow: 0 0 2px #FFFF00; /* This adds a blue outline around the text */
+  font-size: 30px; /* Adjust font size as needed */
+  pointer-events: none; /* Prevent label from being clickable */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+}
+
+.email-input input:focus + .email-label,
+.email-input input:not(:placeholder-shown) + .email-label {
+  opacity: 0; /* Hide label when input is focused or has value */
+}
+
+.email-input input:not(:placeholder-shown) {
+  position: absolute;
+  top: -50px; /* Adjust vertical position of the input */
+  left: 0;
+  z-index: 1;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: #000; /* Adjust text color as needed */
+}
+
+/*======================================CSS FOR THE LOGIN LINK==============================*/
+.login-link {
+  position: relative;
+  top: 25vh;
+  left: 38%;
+  color: #FFFF00;
+  }
+  
+  .log-in-button {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(104, 85, 224, 1);
+  }
+  
+  .log-in-button:hover {
+  color: white;
+  box-shadow: 0 0 10px rgba(104, 85, 224, 0.6); /* Adjusted box-shadow */
+  background-color: rgba(104, 85, 224, 1);
+  }
+  
+  
+  /*===================CSS FOR THE ENTER BUTTON============================*/
+  
+  .enter-button{ /*For MOVING the button*/
+  position: relative;
+  height: 5%;
+  top: 35vh;
+  left: 18% ;
+  }
+  
+  .enter-btn{/*For STYLING the button*/
+  width: 20vw;
+  height: 6vh;
+  align-items: center;
+  justify-content: center;
+  color: #FFFF00;
+  background-color: #000;
+  font-size: x-large;
+  font-family: 'cinzel decorative';
+  }
+  
+  /* Adjustments for hover state */
+  .enter-btn:hover {
+  width: 20vw; /* Maintain the same width */
+  height: 6vh; /* Maintain the same height */
+  background-color: bisque;
+  }
+  
+
+
+
+
+
+/* ============= Animation background ========= */
+.background {
+    background: linear-gradient(132deg,  #100e00, #000000, #1A1A1A);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+  }
+  .cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border-color: #FFFF00 ;
+    border: solid 1px #FFFF00;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+  }
+  .cube:nth-child(2n) {
+    border-color: #FFFF00 ;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+
+  .cube:nth-child(7){
+    animation-delay: 2s;
+    left: 10vw;
+    top: 10vh;
+  }
+
+  .cube:nth-child(8){
+    animation-delay: 1s;
+    left: -1000vw;
+    top: -100vh;
+  }
+
+
+  /* Animate Background*/
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+  

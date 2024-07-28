@@ -1,0 +1,97 @@
+/* General styles for the body and headings */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #141414;
+    color: white;
+    font-family: "Cinzel Decorative", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #FFFF00;
+    text-shadow: 0 0 1vw #FFFF00;
+    margin-top: 20px;
+}
+
+/* Table styles */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    background-color: black;
+}
+
+table, th, td {
+    border: 1px solid #FFFF00;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    font-size: 18px;
+}
+
+th {
+    background-color: #333;
+    color: #FFFF00;
+}
+
+td {
+    background-color: #1a1a1a;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+/* Action links */
+a {
+    color: #FFFF00;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFFF00;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-track {
+    background: grey;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #000;
+}

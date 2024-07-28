@@ -1,0 +1,280 @@
+body, .html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #141414;
+  }
+  /*==================CSS FOR THE HORIZONTAL BAR===================*/
+  .horizontal-bar{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /*==========================CSS FOR THE HEADING OF THE PAGE ====================*/
+  
+  .heading{
+    position: absolute;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%); /* Adjusted to center the logo horizontally */
+    width: 30vw;
+    height: 20vh;
+    font-family: "cinzel decorative" ,sans-serif ;
+    font-size: 68px;
+    color: white;
+    text-shadow: 0 0 1vw #FFFF00; /* This adds a blue outline around the text */
+  }
+
+  /*Font for sign in heading*/
+.cinzel-decorative-regular {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cinzel-decorative-bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    
+  }
+ 
+  
+  /*==========================CSS FOR THE SCROLL BAR=====================*/
+  /* WebKit scrollbar */
+  /* Track */
+  ::-webkit-scrollbar {
+    width: 15px; /* Set width of the scrollbar */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FFFF00; /* Color of the scrollbar handle */
+    border-radius: 5px; /* Border radius of the scrollbar handle */
+    border: 2px solid black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: grey; /* Color of the scrollbar track */
+  }
+  
+  /* Handle when scrolling */
+  ::-webkit-scrollbar-thumb:active {
+    background: #000; /* Color of the scrollbar handle when scrolling */
+  }
+  
+  /*=====================CSS FOR THE HAMBURGER MENU AND NAV BAR======================*/
+
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
+  margin-top: 0;
+  float: left;
+  position: relative;
+  left: 1vw;
+  top: 1vw;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu:hover{
+  transform: translateY(-5px);
+}
+
+.line {
+  width: 90px;
+  height: 20px;
+  background-color: #000;
+  border: 2px solid #FFFF00;
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out; /* Adjusted timing function to ease-in-out */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+}
+
+.vertical-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: black;
+  border: 1px solid #FFFF00;
+  text-shadow: 0 0 1vw #FFFF00; /* This adds a blue outline around the text */
+  padding: 20px;
+  z-index: 9999; /* Set a high z-index value to make sure it appears in front */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.vertical-nav a {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  font-size: 24px;
+  font-family: 'Cinzel decorative' , sans-serif;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+.vertical-nav a:hover {
+  opacity: 0.7;
+}
+
+
+.gray-line {
+  border: none;
+  border-top: 1px solid gray; /* Adjust the thickness and color as needed */
+  width: 80%; /* Adjust the width as needed */
+  margin: 20px auto; /* Adjust the margin to center the line horizontally */
+}
+
+
+
+
+  /*=================================== CSS FOR THE SEARCH ICON ==========================*/
+  /* CSS FOR THE SEARCH ICON */
+  .ico-mglass {
+    position: absolute;/* Position relative */
+    top: 2%; /* Adjusted to 2vh from top */
+    right: 2.5%; /* Adjusted to -85px from right */
+    display: inline-block;
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    border: 1vw solid black; /* Adjusted border color to black */
+    background-color: #141414; /* Adjusted background color to yellow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds shadow at the bottom */
+    transition: transform 0.3s ease; /* Adds transition for hover effect */
+  }
+  
+  .ico-mglass:before {
+    content: "";
+    position: absolute;
+    top: -1.3vw; /* Adjusted position */
+    left: -1.3vw; /* Adjusted position */
+    right: -1.3vw; /* Adjusted position */
+    bottom: -1.3vw; /* Adjusted position */
+    border-radius: 100%;
+    border: 0.3vw solid #FFFF00; /* Inner border color yellow */
+  }
+  
+  .ico-mglass:hover {
+    transform: translateY(-5px); /* Added hover effect */
+  }
+  
+  .ico-mglass:after {
+    content: "";
+    height: 40%;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 0 0 0 3px #FFFF00; /* Add black border around the handle */
+  }
+  
+  /*============================CSS for the actual searching input part =========================*/
+  .search-bar {
+    position: relative;
+  }
+  
+  .search-input-container {
+    position: absolute;
+    top: 2%;
+    right: 2.5%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: red;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #FFFF00;
+    font-size: 16px;
+  }
+  
+  
+  
+  /* Initially hide the search input container */
+  .search-input-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Show the search input container when active */
+  .search-input-container.active {
+    opacity: 1;
+  }
+
+
+  /*============================= CSS FOR THE ITEMS IN SECOND BACKGROUND========================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.item-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#item-image {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#item-description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#item-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+

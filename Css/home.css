@@ -1,0 +1,357 @@
+body, .html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/*==========================CSS FOR THE MAIN BACKGROUND=====================*/
+.background-main {
+  width: 100%;
+  height: 800px; /* Adjusted to 800 of the viewport height */
+  background-color: #141414;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/*==========================CSS FOR THE LOGO OF THE PAGE ====================*/
+
+.logo{
+  position: absolute;
+  top: 0.5vw;
+  left: 50%;
+  transform: translateX(-50%); /* Adjusted to center the logo horizontally */
+  width: 30vw;
+  height: 20vh;
+
+}
+
+
+/*==========================CSS FOR THE ENTIRE SLIDESHOW=====================*/
+.slideshow-container {
+  position: relative;
+  width: 90%; /* Adjusted to 80% of the parent container */
+  height: 60vh; /* Adjusted to 60% of the viewport height */
+  top: -80vh; /*THIS IS WHAT YOURE LOOKING FOR*/
+  margin: 0 auto;
+  margin-left: 4vw;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+  border: 2px solid #FFFF00;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.slideshow-container:hover{
+  transform: translateY(-5px);
+}
+
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s forwards;
+}
+
+.fade-out-left {
+  animation: fadeOutLeft 1s forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0%);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+      opacity: 1;
+      transform: translateX(0%);
+  }
+  to {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+}
+
+/*==========================CSS FOR THE TEXT ON THE SLIDESHOW IMAGES=====================*/
+.pic-text-1, .pic-text-2, .pic-text-3, .pic-text-4 {
+  position: absolute;
+  bottom: 5%; /* Adjusted to 5% from bottom */
+  left: 5%; /* Adjusted to 5% from left */
+  font-family: 'Cinzel Decorative', sans-serif;
+  color: #FFFF00;
+}
+
+/*==========================CSS FOR THE SECOND HALF OR THE HOMEPAGE=====================*/
+.second-background {
+  width: 100%;
+  height: 90vh;
+  background-color: #202020;
+  position: relative;
+  margin-top: -70vh; /* Adjust this value to fit your design */
+  display: flex;
+}
+
+.first-box {
+  width: 40%; /* Adjusted width to make it slightly smaller */
+  height: 70vh; /* Adjusted height to make it slightly smaller */
+  position: relative;
+  margin-left: 6vw;
+  margin-right: 4vw; /* Added space between image and text */
+  margin-top: 20px; /* Added space from the top */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+  border: 2px solid #FFFF00;
+  transition: transform 0.3s ease;
+}
+
+.first-box:hover {
+  transform: translateY(-5px);
+}
+
+.second-box-text {
+  width: 45%; /* Adjusted width to make it slightly smaller */
+  height: 70vh; /* Adjusted height to make it slightly smaller */
+  margin-right: 20px;
+  position: relative;
+  background-color: #202020;
+  color: #FFFF00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw; /* Adjusted font size */
+  font-family: 'Cinzel Decorative', sans-serif;
+}
+
+/*==========================CSS FOR THE SCROLL BAR=====================*/
+/* WebKit scrollbar */
+/* Track */
+::-webkit-scrollbar {
+  width: 15px; /* Set width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFFF00; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Border radius of the scrollbar handle */
+  border: 2px solid black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: grey; /* Color of the scrollbar track */
+}
+
+/* Handle when scrolling */
+::-webkit-scrollbar-thumb:active {
+  background: #000; /* Color of the scrollbar handle when scrolling */
+}
+
+/*=====================CSS FOR THE HAMBURGER MENU AND NAV BAR======================*/
+
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
+  margin-top: 0;
+  float: left;
+  position: relative;
+  left: 1vw;
+  top: 1vw;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu:hover{
+  transform: translateY(-5px);
+}
+
+.line {
+  width: 90px;
+  height: 20px;
+  background-color: #000;
+  border: 2px solid yellow;
+  margin: 5px 0;
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out; /* Adjusted timing function to ease-in-out */
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+}
+
+.vertical-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: black;
+  border: 1px solid #FFFF00;
+  text-shadow: 0 0 1vw #FFFF00; /* This adds a blue outline around the text */
+  padding: 20px;
+  z-index: 9999; /* Set a high z-index value to make sure it appears in front */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.vertical-nav a {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  font-size: 24px;
+  font-family: 'Cinzel decorative' , sans-serif;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+.vertical-nav a:hover {
+  opacity: 0.7;
+}
+
+
+.gray-line {
+  border: none;
+  border-top: 1px solid gray; /* Adjust the thickness and color as needed */
+  width: 80%; /* Adjust the width as needed */
+  margin: 20px auto; /* Adjust the margin to center the line horizontally */
+}
+
+/*=================================== CSS FOR THE SEARCH ICON ==========================*/
+/* CSS FOR THE SEARCH ICON */
+.ico-mglass {
+  position: absolute;/* Position relative */
+  top: 2%; /* Adjusted to 2vh from top */
+  right: 2.5%; /* Adjusted to -85px from right */
+  display: inline-block;
+  border-radius: 100%;
+  height: 56px;
+  width: 56px;
+  border: 1vw solid black; /* Adjusted border color to black */
+  background-color: #141414; /* Adjusted background color to yellow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds shadow at the bottom */
+  transition: transform 0.3s ease; /* Adds transition for hover effect */
+}
+
+.ico-mglass:before {
+  content: "";
+  position: absolute;
+  top: -1.3vw; /* Adjusted position */
+  left: -1.3vw; /* Adjusted position */
+  right: -1.3vw; /* Adjusted position */
+  bottom: -1.3vw; /* Adjusted position */
+  border-radius: 100%;
+  border: 0.3vw solid yellow; /* Inner border color yellow */
+}
+
+.ico-mglass:hover {
+  transform: translateY(-5px); /* Added hover effect */
+}
+
+.ico-mglass:after {
+  content: "";
+  height: 40%;
+  width: 100%;
+  background: black;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 0 0 0 3px #FFFF00; /* Add black border around the handle */
+}
+
+/*============================CSS for the actual searching input part =========================*/
+.search-bar {
+  position: relative;
+}
+
+.search-input-container {
+  position: absolute;
+  top: 2%;
+  right: 2.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: red;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: yellow;
+  font-size: 16px;
+}
+
+
+
+/* Initially hide the search input container */
+.search-input-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the search input container when active */
+.search-input-container.active {
+  opacity: 1;
+}
+
+
+
+/*====================================CSS FOR THE THIRD BACKGROUND======================*/
+.third-background{
+  width: 100%;
+  height: 500px;
+  background-color: red;
+}
+
+.first-record{
+  
+}
+
+#vinyl-case {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  position: relative;
+}
+
+.img ,#vinyl-disk {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+  z-index: 2;
+
+}
+
+
+#vinyl-case:hover #vinyl-disk {
+  left: 200px; /* Move the circle out of the square */
+}
+
+
+
+
+

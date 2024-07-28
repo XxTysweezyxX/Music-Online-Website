@@ -1,0 +1,200 @@
+/* Reset CSS */
+body, .html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #141414;
+  }
+  
+  /* Horizontal Bar */
+  .horizontal-bar {
+    width: 100%;
+    height: 150px;
+    background-color: black; /* Adjusted color */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Heading */
+  .heading {
+    position: absolute;
+    top: 0.5vw;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 30vw;
+    font-family: "Cinzel Decorative", sans-serif;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 1vw #FFFF00;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+  }
+  
+  .line {
+    width: 90px;
+    height: 20px;
+    background-color: #000;
+    border: 2px solid #FFFF00;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 1);
+  }
+  
+  /* Vertical Navbar */
+  .vertical-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    border: 1px solid #FFFF00;
+    text-shadow: 0 0 1vw #FFFF00;
+    padding: 20px;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .vertical-nav a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    font-size: 24px;
+    font-family: 'Cinzel decorative' , sans-serif;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .vertical-nav a:hover {
+    opacity: 0.7;
+  }
+  
+  .gray-line {
+    border: none;
+    border-top: 1px solid gray;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FFFF00;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: grey;
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background: #000;
+  }
+  
+  /*============================ Add Product Form */
+  /* Add section styles */
+  .add-div {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto; /* Center the form horizontally */
+    max-width: 600px; /* Limit the maximum width of the form */
+    border-radius: 5px;
+  }
+  
+  
+  .add-div label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .add-div input[type="text"],
+  .add-div input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-div input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .add-div input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Update section styles */
+  .update-div,
+  .delete-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto; /* Center the section horizontally */
+    max-width: 600px; /* Limit the maximum width of the section */
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .update-div h2,
+  .delete-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .update-div .form-group,
+  .delete-section .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .update-div label,
+  .delete-section label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .update-div input[type="text"],
+  .delete-section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .update-div input[type="submit"],
+  .delete-section input[type="submit"] {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .update-div input[type="submit"]:hover,
+  .delete-section input[type="submit"]:hover {
+    background-color: #d32f2f;
+  }
+  
